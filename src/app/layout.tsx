@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Aryan Singh Portfolio",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://singhtwenty2.pages.dev/og-image.png",
         width: 1200,
         height: 630,
       },
