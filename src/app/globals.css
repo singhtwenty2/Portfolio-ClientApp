@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.prose {
+    color: rgb(212 212 216); /* text-zinc-300 */
+}
+
+.prose strong {
+    color: rgb(244 244 245); /* text-zinc-100 */
+}
+
+.prose a {
+    color: rgb(244 244 245);  /* text-zinc-100 */
+    text-decoration: underline;
+    text-decoration-color: rgb(113 113 122);  /* decoration-zinc-500 */
+    transition: all 200ms;
+}
+
+.prose a:hover {
+    text-decoration-color: rgb(212 212 216);  /* decoration-zinc-300 */
+}
+
+body {
+  overflow-x: hidden;
+  background: black;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
