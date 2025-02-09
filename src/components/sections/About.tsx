@@ -1,3 +1,5 @@
+'use client';
+
 import { personalInfo } from "@/data/personal";
 import { Smartphone, Server, Cloud, Database, LucideIcon } from "lucide-react";
 import { ReactNode } from "react";

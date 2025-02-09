@@ -85,9 +85,10 @@ export default function Footer() {
         {
             title: 'Technology Stack',
             links: [
-                { name: 'React', path: 'https://react.dev' },
+                { name: 'Next.js', path: 'https://nextjs.org/docs' },
                 { name: 'TypeScript', path: 'https://www.typescriptlang.org/docs' },
-                { name: 'Spring Boot', path: 'https://spring.io/projects/spring-boot' },
+                { name: 'Deno', path: 'https://docs.deno.com/' },
+                { name: 'Supabase Edge Functions', path: 'https://supabase.com/docs/guides/functions' },
                 { name: 'Cloudflare', path: 'https://developers.cloudflare.com/' }
             ]
         }

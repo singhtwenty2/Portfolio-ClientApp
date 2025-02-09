@@ -6,6 +6,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import ClientProgressLoader from "@/components/ClientProgressLoader";
 import "./globals.css";
 import { personalInfo } from "@/data/personal";
+import QueryProvider from "@/utils/QueryProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,9 +22,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://singhtwenty2.pages.dev/"),
   title: {
     default: "Aryan Singh | Mobile & Backend Developer",
-    template: "%s | Aryan Singh Portfolio"
+    template: "%s | Aryan Singh Portfolio",
   },
-  description: "Experienced Mobile and Backend Developer specializing in Android development and Spring Boot. Crafting innovative software solutions with expertise in mobile and web technologies.",
+  description:
+    "Experienced Mobile and Backend Developer specializing in Android development and Spring Boot. Crafting innovative software solutions with expertise in mobile and web technologies.",
   keywords: [
     "Aryan Singh",
     "Mobile Developer",
@@ -45,7 +47,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://singhtwenty2.pages.dev/",
     title: "Aryan Singh | Mobile & Backend Developer",
-    description: "Experienced Mobile and Backend Developer specializing in Android development and Spring Boot.",
+    description:
+      "Experienced Mobile and Backend Developer specializing in Android development and Spring Boot.",
     siteName: "Aryan Singh Portfolio",
     images: [
       {
@@ -58,7 +61,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Aryan Singh | Mobile & Backend Developer",
-    description: "Experienced Mobile and Backend Developer specializing in Android development and Spring Boot.",
+    description:
+      "Experienced Mobile and Backend Developer specializing in Android development and Spring Boot.",
     creator: personalInfo.socialLinks.twitter,
     images: ["/og-image.png"],
   },
@@ -71,9 +75,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   // verification: {
@@ -91,12 +95,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative bg-gradient-to-b from-black via-black to-black text-white min-h-screen`}
       >
-        <ClientProgressLoader />
-        <SmoothScroll>
-          <Navbar />
-          {children}
-          <Footer />
-        </SmoothScroll>
+        <QueryProvider>
+          <ClientProgressLoader />
+          <SmoothScroll>
+            <Navbar />
+            {children}
+            <Footer />
+          </SmoothScroll>
+        </QueryProvider>
       </body>
     </html>
   );

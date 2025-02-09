@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { Cloud, Code, Database, Smartphone } from "lucide-react";
 import { Radar } from 'recharts';

@@ -39,6 +39,12 @@ const Navbar = () => {
   const handleNavigation = (path: string) => {
     setIsOpen(false);
     
+    // Handle direct route navigation first
+    if (path === '/projects' || path === '/resume') {
+      router.push(path);
+      return;
+    }
+
     if (path === '#home') {
       // If we're already on home page, scroll to top
       if (location.pathname === '/') {
@@ -50,12 +56,6 @@ const Navbar = () => {
         // Navigate to home page
         router.push('/');
       }
-      return;
-    }
-
-    // Handle resume page navigation
-    if (path === '/resume') {
-      router.push(path);
       return;
     }
 
@@ -75,10 +75,10 @@ const Navbar = () => {
     } else if (path.startsWith('#')) {
       // If trying to navigate to a section but not on home page,
       // first navigate to home then scroll
-      const element = document.querySelector(path);
-      if (element) {
-        router.push('/');
-        setTimeout(() => {
+      router.push('/');
+      setTimeout(() => {
+        const element = document.querySelector(path);
+        if (element) {
           const offset = 100;
           const elementPosition = element.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - offset;
@@ -87,8 +87,8 @@ const Navbar = () => {
             top: offsetPosition,
             behavior: 'smooth'
           });
-        }, 500);  
-      }
+        }
+      }, 500);  
     }
   };
 
@@ -107,7 +107,7 @@ const Navbar = () => {
     { name: 'Home', path: '#home' },
     { name: 'About', path: '#about' },
     { name: 'Skills', path: '#skills' },
-    { name: 'Projects', path: '#projects' },
+    { name: 'Projects', path: '/projects' },
     { name: 'Experience', path: '#experience' },
     { name: 'Contact', path: '#contact' },
     { name: 'Resume', path: '/resume' },
