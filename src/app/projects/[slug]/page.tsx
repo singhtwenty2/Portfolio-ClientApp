@@ -3,6 +3,8 @@ import ProjectDetail from '@/components/ProjectDetail';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+export const runtime = 'edge';
+
 interface PageProps {
   params: Promise<{ slug: string }>;
   searchParams?: Promise<Record<string, string | string[]>>;
