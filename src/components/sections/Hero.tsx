@@ -150,9 +150,6 @@ export default function Hero() {
                                 transition={{ duration: 0.8, delay: 0.2 }}
                                 className="space-y-6 sm:space-y-8"
                             >
-                                <CustomBadge>
-                                    {personalInfo.location}
-                                </CustomBadge>
                                 
                                 <div className="space-y-4">
                                     <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight text-zinc-100 leading-[1.1]">
