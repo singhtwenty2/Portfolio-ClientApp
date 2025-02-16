@@ -6,15 +6,6 @@ import { motion } from 'framer-motion';
 import { personalInfo } from '@/data/personal';
 import { ReactNode } from 'react';
 
-const CustomBadge = ({ children }: { children: ReactNode }) => (
-    <div className="inline-flex items-center gap-2 px-5 py-1.5 text-sm text-zinc-300 border border-zinc-800/80 rounded-full backdrop-blur-sm bg-zinc-900/20 hover:border-zinc-700/80 transition-colors duration-300">
-        <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-        </span>
-        {children}
-    </div>
-);
 
 const CustomCard = ({ children, className = "" }: { children: ReactNode, className?: string }) => (
     <div className={`group relative ${className}`}>
