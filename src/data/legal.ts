@@ -12,10 +12,17 @@ export interface CookieInfo {
 export interface PrivacyPolicyData {
     lastUpdated: string;
     introduction: string;
-    sections: PrivacySection[];
+    sections: {
+        title: string;
+        content: string[];
+    }[];
     cookies: {
         description: string;
-        types: CookieInfo[];
+        types: {
+            name: string;
+            purpose: string;
+            duration: string;
+        }[];
     };
 }
 
@@ -31,46 +38,57 @@ export interface TermsData {
 }
 
 export const privacyPolicyData: PrivacyPolicyData = {
-    lastUpdated: "February 2, 2025",
-    introduction: "Welcome to my personal portfolio website. I am committed to protecting your privacy and ensuring transparency about how I handle information collected through this website.",
+    lastUpdated: "February 21, 2025",
+    introduction: "Welcome to my personal portfolio website. I am committed to maintaining the trust and confidence of visitors to my website by adhering to the highest standards of privacy protection and data transparency. This privacy policy outlines the limited ways in which this website handles information.",
     sections: [
         {
-            title: "Information Collection",
+            title: "Information Collection and Analytics",
             content: [
-                "This website collects minimal data through Google Analytics to understand visitor behavior and improve user experience.",
-                "We do not collect any personal information, sensor data, or hardware access (such as camera, microphone, etc.).",
-                "No user registration or account creation is required to use this website."
+                "This website employs Cloudflare Web Analytics, a privacy-first analytics solution that helps understand website performance and user engagement without compromising visitor privacy.",
+                "Cloudflare Web Analytics operates without using cookies or collecting personal information, providing only aggregated metrics about website traffic and performance.",
+                "We explicitly do not collect, store, or process any personal identifiable information (PII), and no user registration is required to access this website.",
+                "The analytics implementation respects Do Not Track (DNT) browser settings and complies with major privacy regulations."
             ]
         },
         {
-            title: "Data Usage",
+            title: "Data Processing and Usage",
             content: [
-                "Analytics data is used solely for website performance monitoring and user experience improvement.",
-                "Your data is never sold or shared with third parties for marketing purposes.",
-                "We use aggregated, anonymous data to understand website traffic patterns and user behavior."
+                "All analytics data is processed anonymously and aggregated, focusing solely on essential metrics such as page views, visit duration, and referral sources.",
+                "Your data is never sold, shared, or used for marketing purposes. The collected information serves exclusively to improve website performance and user experience.",
+                "We maintain a strict no-sharing policy with third parties, except where required by law.",
+                "The website operates with minimal data collection principles, adhering to data minimization practices."
             ]
         },
         {
-            title: "Technical Information",
+            title: "Technical Information and Security",
             content: [
-                "We automatically collect standard server logs and anonymous usage statistics.",
-                "This includes: IP addresses, browser type, device type, time spent on site, and pages visited.",
-                "This information helps us maintain website security and optimize performance."
+                "Our hosting infrastructure automatically logs basic server information required for security and operational purposes.",
+                "This includes anonymized IP addresses, browser types, device categories, and basic visit timestamps - all processed in compliance with privacy regulations.",
+                "We employ industry-standard security measures to protect against unauthorized access, alteration, or destruction of the limited data we collect.",
+                "All data transmission occurs over secure HTTPS connections, encrypted using current security standards."
+            ]
+        },
+        {
+            title: "Your Rights and Choices",
+            content: [
+                "You maintain full control over your privacy while visiting this website, including the right to use browser privacy features and tracking prevention tools.",
+                "No account creation or personal information submission is required to access any part of this website.",
+                "The website respects all privacy-related browser settings and provides full functionality without requiring the acceptance of tracking or analytics."
             ]
         }
     ],
     cookies: {
-        description: "This website uses essential cookies for basic functionality and analytics purposes.",
+        description: "This website operates with minimal cookie usage, implementing only essential technical cookies required for basic website functionality. We do not use any tracking or marketing cookies.",
         types: [
             {
-                name: "Google Analytics",
-                purpose: "Track website usage and user behavior",
-                duration: "2 years"
+                name: "Essential Technical Cookies",
+                purpose: "Enable core website functionality and security features",
+                duration: "Session only"
             },
             {
-                name: "Essential Cookies",
-                purpose: "Enable basic website functionality",
-                duration: "Session"
+                name: "Cloudflare Security Cookies",
+                purpose: "Provide security and performance optimization through Cloudflare's infrastructure",
+                duration: "Session only"
             }
         ]
     }
