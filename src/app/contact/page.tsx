@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'mobile app development consultation'
   ],
   openGraph: {
-    title: 'Contact Aryan Singh | Mobile & Backend Developer',
+    title: 'Contact Aryan Singh \\ Mobile & Backend Developer',
     description: 'Get in touch with me for mobile and backend development projects, collaborations, or inquiries about my services and expertise.',
     type: 'website',
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Aryan Singh | Mobile & Backend Developer',
+    title: 'Contact Aryan Singh \\ Mobile & Backend Developer',
     description: 'Get in touch with me for mobile and backend development projects, collaborations, or inquiries about my services and expertise.'
   }
 };

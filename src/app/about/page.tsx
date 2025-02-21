@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'software development philosophy'
   ],
   openGraph: {
-    title: 'About Aryan Singh | Mobile & Backend Developer',
+    title: 'About Aryan Singh \\ Mobile & Backend Developer',
     description: 'Discover my professional journey, technical skills, and approach to building scalable mobile and backend applications.',
     type: 'website',
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Aryan Singh | Mobile & Backend Developer',
+    title: 'About Aryan Singh \\ Mobile & Backend Developer',
     description: 'Discover my professional journey, technical skills, and approach to building scalable mobile and backend applications.'
   }
 };

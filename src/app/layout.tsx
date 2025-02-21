@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://singhtwenty2.pages.dev/",
-    title: "Aryan Singh | Mobile & Backend Developer",
+    title: "Aryan Singh \\ Mobile & Backend Developer",
     description:
       "Experienced Mobile and Backend Developer specializing in Android development and Spring Boot.",
     siteName: "Aryan Singh Portfolio",
