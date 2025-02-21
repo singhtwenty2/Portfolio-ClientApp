@@ -21,8 +21,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://singhtwenty2.pages.dev/"),
   title: {
-    default: "Aryan Singh | Mobile & Backend Developer",
-    template: "%s | Aryan Singh Portfolio",
+    default: "Aryan Singh \\ Mobile & Backend Developer",
+    template: "",
   },
   description:
     "Experienced Mobile and Backend Developer specializing in Android development and Spring Boot. Crafting innovative software solutions with expertise in mobile and web technologies.",

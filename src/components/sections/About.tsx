@@ -82,7 +82,7 @@ const About: React.FC = () => {
         <div className="space-y-12">
           <GlassCard>
             <p className="text-lg md:text-xl text-white/90 font-light leading-relaxed tracking-wide">
-              {personalInfo.bio}
+              {personalInfo.aboutdetail}
             </p>
           </GlassCard>
           <GlassCard>

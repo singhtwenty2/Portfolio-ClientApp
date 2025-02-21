@@ -1,7 +1,7 @@
 'use client';
 import { Project } from "@/types/api/project";
 import { usePaginatedProjects } from "@/hooks/usePaginatedProjects";
-import { ArrowDown, Code2 } from 'lucide-react';
+import { Code2 } from 'lucide-react';
 import { ProjectCard } from "./ProjectsCard";
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
@@ -30,7 +30,7 @@ const ProjectSkeleton = () => (
 );
 
 export default function ProjectsCatalogue({ initialProjects }: ProjectsCatalogueProps) {
-  const { projects, isLoading, error, hasMore, loadMoreProjects } = usePaginatedProjects(initialProjects);
+  const { projects, isLoading, error } = usePaginatedProjects(initialProjects);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -121,7 +121,7 @@ export default function ProjectsCatalogue({ initialProjects }: ProjectsCatalogue
             )}
           </motion.div>
           
-          {hasMore && (
+          {/* {hasMore && (
             <motion.div
               className="mt-24 text-center"
               initial={{ opacity: 0 }}
@@ -154,7 +154,7 @@ export default function ProjectsCatalogue({ initialProjects }: ProjectsCatalogue
                 />
               </button>
             </motion.div>
-          )}
+          )} */}
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 'use client';
 
+import { skillCategories } from '@/data/skills';
 import { useState, useEffect } from 'react';
-import { Cloud, Code, Database, Smartphone } from "lucide-react";
 import { Radar } from 'recharts';
 import {
   RadarChart,
@@ -9,66 +9,6 @@ import {
   PolarAngleAxis,
   ResponsiveContainer,
 } from 'recharts';
-
-const skillCategories = [
-  {
-    title: 'ANDROID DEVELOPMENT',
-    icon: Smartphone,
-    skills: [
-      { name: 'Kotlin', value: 95 },
-      { name: 'Jetpack Compose', value: 90 },
-      { name: 'Dagger Hilt', value: 85 },
-      { name: 'Room Database', value: 90 },
-      { name: 'KMM', value: 80 },
-      { name: 'WorkManager', value: 85 }
-    ]
-  },
-  {
-    title: 'BACKEND DEVELOPMENT',
-    icon: Database,
-    skills: [
-      { name: 'Spring Boot', value: 90 },
-      { name: 'Spring Security', value: 85 },
-      { name: 'Spring Data JPA', value: 85 },
-      { name: 'Ktor', value: 80 },
-      { name: 'Flask', value: 75 },
-      { name: 'Microservices', value: 85 }
-    ]
-  },
-  {
-    title: 'DATABASES & CACHING',
-    icon: Database,
-    skills: [
-      { name: 'MySQL', value: 90 },
-      { name: 'PostgreSQL', value: 85 },
-      { name: 'Redis', value: 80 },
-      { name: 'Kafka', value: 75 },
-      { name: 'Room', value: 90 }
-    ]
-  },
-  {
-    title: 'CLOUD & DEVOPS',
-    icon: Cloud,
-    skills: [
-      { name: 'Docker', value: 85 },
-      { name: 'Kubernetes', value: 80 },
-      { name: 'AWS Services', value: 85 },
-      { name: 'GCP', value: 75 },
-      { name: 'Git & GitHub', value: 90 }
-    ]
-  },
-  {
-    title: 'TESTING & DEVELOPMENT',
-    icon: Code,
-    skills: [
-      { name: 'JUnit', value: 85 },
-      { name: 'Espresso', value: 85 },
-      { name: 'TDD', value: 80 },
-      { name: 'UI/UX Design', value: 75 },
-      { name: 'DI', value: 90 }
-    ]
-  }
-];
 
 export default function Skills() {
   const [selectedCategory, setSelectedCategory] = useState(skillCategories[0]);
