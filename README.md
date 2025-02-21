@@ -1,36 +1,177 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <h1>
+    <img src="https://pub-8151767378da404c9d68b622662381f3.r2.dev/logo.png" alt="Portfolio Logo" width="80" />
+    <br/>
+    Portfolio | Aryan Singh
+  </h1>
+  
+  <p align="center">
+    <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js" alt="Next.js" />
+    <img src="https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react" alt="React" />
+    <img src="https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Cloudflare-Pages-orange?style=for-the-badge&logo=cloudflare" alt="Cloudflare" />
+  </p>
 
-## Getting Started
+  <p>A modern, performant, and animated portfolio crafted with cutting-edge web technologies</p>
+</div>
 
-First, run the development server:
+![Portfolio Preview](https://pub-8151767378da404c9d68b622662381f3.r2.dev/portfolio-hero-showcase.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Key Features
+
+<table>
+<tr>
+<td>
+  
+### 🎯 Modern Architecture
+- Next.js 15 with App Router
+- React 19 with Server Components
+- Full TypeScript Implementation
+- Edge-First Deployment
+
+### 🎨 Premium Design
+- Glassmorphism UI Elements
+- Fluid Animations with Framer Motion
+- Responsive & Interactive Components
+- Custom Hover Effects
+  
+</td>
+<td>
+
+### ⚡ Performance
+- Global Edge Network via Cloudflare
+- Optimized Core Web Vitals
+- Automatic Image Optimization
+- Dynamic Code Splitting
+
+### 🛡️ Enterprise Grade
+- Type-Safe Development
+- Automated CI/CD Pipeline
+- Serverless Architecture
+- SEO Optimized
+  
+</td>
+</tr>
+</table>
+
+## 🚀 Tech Stack
+
+### Core
+```typescript
+{
+  "frontend": {
+    "framework": "Next.js 15",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "animations": "Framer Motion"
+  },
+  "backend": {
+    "hosting": "Cloudflare Pages",
+    "database": "Supabase",
+    "functions": "Supabase Edge Functions"
+  }
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
+```typescript
+{
+  "tools": {
+    "build": "TurboPack",
+    "linting": "ESLint",
+    "deployment": "GitHub Actions"
+  }
+}
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Quick Start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Install project dependencies
+yarn
 
-## Learn More
+# Start development server
+yarn dev
 
-To learn more about Next.js, take a look at the following resources:
+# Create production build
+yarn build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Launch production server
+yarn start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 Project Structure
 
-## Deploy on Vercel
+```
+web-app/
+├── .github/          # GitHub Actions Workflows
+├── .next/           # Next.js Build Output
+├── src/             # Source Code
+│   ├── app/         # Next.js App Components
+│   ├── components/  # Reusable Components
+│   ├── data/       # Static Data Files
+│   ├── hooks/      # Custom React Hooks
+│   ├── lib/api     # API Integrations
+│   ├── types/      # TypeScript Definitions
+│   └── utils/      # Utility Functions
+├── public/          # Static Assets
+├── node_modules/    # Dependencies
+└── package.json     # Project Configuration
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ⚡ Performance Metrics
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<table>
+<tr>
+<td>
+  
+### 📱 Mobile
+- Performance: 95+
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 100
+  
+</td>
+<td>
+
+### 🖥️ Desktop
+- Performance: 98+
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 100
+  
+</td>
+</tr>
+</table>
+
+## 🔒 Security Features
+
+- Automatic HTTPS/TLS
+- HTTP/2 Support
+- Configured Security Headers
+- Content Security Policy
+- Edge Network Protection
+- Regular Dependency Updates
+
+## 💡 Issue Reporting
+
+While this is a personal portfolio, I welcome:
+- Bug Reports
+- Feature Suggestions
+- Performance Improvement Ideas
+
+*Note: Direct contributions via pull requests are not accepted.*
+
+<div align="center">
+
+---
+
+<p>© 2024 Aryan Singh. All rights reserved.</p>
+
+<p>
+  <a href="https://github.com/singhtwenty2">GitHub</a> •
+  <a href="https://www.linkedin.com/in/singhtwenty2/">LinkedIn</a> •
+  <a href="https://x.com/singhtwenty2">X</a>
+</p>
+
+</div>
