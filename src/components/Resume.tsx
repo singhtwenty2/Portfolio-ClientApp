@@ -173,6 +173,11 @@ export default function Resume() {
                             <a href={data.contact.github} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
                                 GitHub
                             </a>
+                            {data.contact.portfolio && (
+                                <a href={data.contact.portfolio} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+                                    Portfolio
+                                </a>
+                            )}
                         </div>
                     </motion.div>
 
@@ -207,13 +212,50 @@ export default function Resume() {
                         </div>
                     </motion.div>
 
+                    {/* Work Experience - New Section */}
+                    {data.experience && data.experience.length > 0 && (
+                        <motion.div
+                            className="mb-12"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: "-20% 0px -20% 0px" }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                        >
+                            <SectionHeading>Work Experience</SectionHeading>
+                            <div className="space-y-8">
+                                {data.experience.map((exp, index) => (
+                                    <motion.div
+                                        key={index}
+                                        className="p-6 bg-zinc-900/30 rounded-xl border border-zinc-800/50"
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                                    >
+                                        <div className="flex flex-wrap items-baseline gap-2 mb-2">
+                                            <h3 className="text-xl font-semibold text-zinc-100">
+                                                {exp.title} | {exp.company}
+                                            </h3>
+                                            <span className="text-zinc-400 text-sm">{exp.duration}</span>
+                                        </div>
+                                        <ul className="list-disc pl-5 space-y-2 text-zinc-300">
+                                            {exp.achievements.map((achievement, achievementIndex) => (
+                                                <li key={`${index}-${achievementIndex}`}>{achievement}</li>
+                                            ))}
+                                        </ul>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    )}
+
                     {/* Professional Projects */}
                     <motion.div
                         className="mb-12"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-20% 0px -20% 0px" }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
+                        transition={{ duration: 0.6, delay: 0.5 }}
                     >
                         <SectionHeading>Professional Projects</SectionHeading>
                         <div className="space-y-8">
@@ -258,7 +300,7 @@ export default function Resume() {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-20% 0px -20% 0px" }}
-                        transition={{ duration: 0.6, delay: 0.5 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
                     >
                         <SectionHeading>Achievements & Leadership</SectionHeading>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -279,7 +321,7 @@ export default function Resume() {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-20% 0px -20% 0px" }}
-                        transition={{ duration: 0.6, delay: 0.6 }}
+                        transition={{ duration: 0.6, delay: 0.7 }}
                     >
                         <SectionHeading>Education</SectionHeading>
                         <div className="space-y-6">
