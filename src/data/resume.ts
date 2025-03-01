@@ -34,7 +34,7 @@ export const resumeData: ResumeData = {
     ],
     experience: [
       {
-        title: "Full Stack Developer Intern",
+        title: "Backend Developer Intern",
         company: "Intrakraft Solutions Private Limited",
         duration: "Feb 2025 – Present",
         achievements: [

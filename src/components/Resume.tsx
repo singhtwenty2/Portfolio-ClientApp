@@ -7,6 +7,8 @@ import { toast, Toaster } from 'sonner';
 import { resumeData } from '@/data/resume';
 import { ResumeData } from '@/types/resume';
 
+const pdfUrl = "https://pub-8151767378da404c9d68b622662381f3.r2.dev/Aryan_Singh_Resume.pdf";
+
 const DownloadToast: React.FC = () => (
     <motion.div
         initial={{ opacity: 0, y: 50, scale: 0.95 }}
@@ -37,8 +39,6 @@ const FloatingButton: React.FC = () => {
     const buttonPadding = useTransform(scrollY, [0, 100], ["16px", "12px"]);
 
     const handleDownload = async () => {
-        const pdfUrl = "https://pub-8151767378da404c9d68b622662381f3.r2.dev/Aryan_Singh_Resume.pdf";
-        
         try {
             // Show the download toast
             toast.custom(() => <DownloadToast />, {
@@ -107,6 +107,11 @@ const SectionHeading: React.FC<{ children: React.ReactNode }> = ({ children }) =
 
 export default function Resume() {
     const data: ResumeData = resumeData;
+    const currentDate = new Date().toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
 
     return (
         <div className="min-h-screen w-full bg-gradient-to-b from-black via-zinc-950 to-black relative overflow-hidden">
@@ -143,6 +148,18 @@ export default function Resume() {
                 >
                     A comprehensive overview of my professional journey, technical expertise, and achievements
                 </motion.p>
+                
+                {/* Update Date Badge */}
+                <motion.div
+                    className="mt-6 inline-flex"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                    <div className="px-4 py-2 rounded-full bg-gradient-to-r from-zinc-800/70 to-zinc-900/70 border border-zinc-700/30 backdrop-blur-lg shadow-lg">
+                        <span className="text-sm text-zinc-400">Updated on <span className="font-medium text-zinc-300">{currentDate}</span></span>
+                    </div>
+                </motion.div>
             </div>
 
             {/* Content Container */}
