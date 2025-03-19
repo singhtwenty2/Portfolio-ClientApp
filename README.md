@@ -2,7 +2,7 @@
   <h1>
     <img src="https://pub-8151767378da404c9d68b622662381f3.r2.dev/logo.png" alt="Portfolio Logo" width="80" />
     <br/>
-    Portfolio | Aryan Singh
+    Portfolio \ Aryan Singh
   </h1>
   
   <p align="center">
